@@ -1,69 +1,43 @@
-
-<!DOCTYPE html>
-<html>
-<head>
 <style>
-table, th, td {
-  border: 1px solid green;
+table {
+  width: 60%;
+  border-collapse: collapse;
 }
-</style>
-</head>
-<body>
 
-<h2>Add a border to a table:</h2>
-
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-  </tr>
-</table>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table, td, th {
-  border: 1px solid;
+th {
+  background-color: #2196F3;
+  color: white;
   padding: 10px;
 }
 
-table {
-  border-collapse: collapse;
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+.aprobado {
+  background-color: #c8e6c9;
+}
+
+.reprobado {
+  background-color: #ffcdd2;
 }
 </style>
-</head>
-<body>
 
-<h2>The padding Property</h2>
-
-<p>Add space between the border and the content in a table.</p>
-
-<table>
+<table border="1">
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
+    <th>Alumno</th>
+    <th>Materia</th>
+    <th>Nota</th>
   </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
+  <tr class="aprobado">
+    <td>Juan</td>
+    <td>Matemáticas</td>
+    <td>90</td>
   </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
+  <tr class="reprobado">
+    <td>María</td>
+    <td>Historia</td>
+    <td>55</td>
   </tr>
 </table>
-
-</body>
-</html>
