@@ -1,0 +1,156 @@
+/* Configuración General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+}
+
+.cv-container {
+    background-color: white;
+    width: 800px;
+    padding: 30px;
+    border: 1px solid #000;
+}
+
+/* Nota: Estilo de bordes dobles/gruesos como en la imagen */
+.photo-box, .about-me-box, .name-box, .aptitudes-box, .contact-box, .profile-summary, .experience-section {
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+
+/* Cabecera (Foto y Sobre mí) */
+.header-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.photo-box {
+    width: 35%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la foto */
+}
+
+.about-me-box {
+    width: 65%;
+    padding: 15px;
+}
+
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.icon-header {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Cuerpo Principal */
+.main-content {
+    display: flex;
+    gap: 15px;
+}
+
+.left-column {
+    width: 35%;
+}
+
+.right-column {
+    width: 65%;
+}
+
+/* Estilos Columna Izquierda */
+.name-box {
+    padding: 20px;
+    text-align: center;
+}
+
+.name-box h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.aptitudes-box {
+    padding: 15px;
+    font-size: 0.85rem;
+}
+
+.aptitudes-box h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.aptitudes-box ul {
+    list-style: none;
+}
+
+.aptitudes-box li {
+    margin-bottom: 10px;
+}
+
+.contact-box {
+    padding: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+}
+
+.contact-item img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Estilos Columna Derecha */
+.inner-header {
+    background-color: white;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-summary, .experience-section {
+    padding: 0 0 15px 0; /* Header tiene padding interno */
+}
+
+.profile-summary ul, .experience-section {
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+.profile-summary li {
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+
+.exp-item {
+    margin-bottom: 15px;
+}
+
+.exp-item h4 {
+    margin-bottom: 5px;
+}
