@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constancia CURP - Replica</title>
+    <style>
+        :root {
+            --mexico-green: #235B4E;
+            --mexico-gold: #9F2241; /* Color institucional */
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal con el borde decorativo */
+        .curp-card {
+            background-color: white;
+            width: 850px;
+            height: 500px;
+            border: 15px solid;
+            border-image: url('crpdepilinm.jpg') 30 round; /* Usando la imagen como referencia de borde si fuera necesario, pero aquí simulamos el marco */
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Marca de agua central */
+        .curp-card::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-image: url('crpdepilinm.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .header {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            color: var(--mexico-green);
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .header h2 {
+            color: #BC955C;
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 180px 1fr 180px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .side-left {
+            text-align: center;
+        }
+
+        .flag-img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .soy-mexico {
+            color: #9db2a7;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 24px;
+        }
+
+        .main-info {
+            padding-left: 20px;
+        }
+
+        .info-group {
+            margin-bottom: 25px;
+        }
+
+        .label {
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .value {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .side-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            height: 40px;
+            filter: grayscale(1);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="curp-card">
+        <div class="header">
+            <h1>Estados Unidos Mexicanos</h1>
+            <h2>CONSTANCIA DE LA CLAVE ÚNICA<br>DE REGISTRO DE POBLACIÓN</h2>
+        </div>
+
+        <div class="content">
+            <div class="side-left">
+                <!-- Referencia a la imagen original para elementos visuales -->
+                <img src="crpdepilinm.jpg" alt="Bandera" class="flag-img" style="object-fit: none; object-position: 10% 35%; width: 100px; height: 70px;">
+                <div class="soy-mexico">Soy México</div>
+            </div>
+
+            <div class="main-info">
+                <div class="info-group">
+                    <span class="label">Clave:</span>
+                    <span class="value">GAOC080505HMCVRRA0</span>
+                </div>
+                
+                <div class="info-group">
+                    <span class="label">Nombre</span>
+                    <span class="value">CRUZ ROBERTO GAVINO ORDOÑEZ</span>
+                </div>
+
+                <div class="info-group">
+                    <span class="label">Entidad de registro: &nbsp;&nbsp;&nbsp; <strong>MEXICO</strong></span>
+                </div>
+            </div>
+
+            <div class="side-right">
+                <img src="crpdepilinm.jpg" alt="QR" class="qr-code" style="object-fit: none; object-position: 92% 50%;">
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>GOBIERNO DE MÉXICO</span>
+            <span>GOBERNACIÓN</span>
+            <span>RENAPO</span>
+        </div>
+    </div>
+
+</body>
+</html>
